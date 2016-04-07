@@ -1,8 +1,12 @@
 export function RoutesConfig($stateProvider, $urlRouterProvider) {
 	'ngInject';
 
-	var getView = function(viewName) {
-		return './views/app/pages/' + viewName + '/' + viewName + '.page.html';
+	var getViewUI = function(viewName) {
+		return './views/app/pages/UI/' + viewName + '/' + viewName + '.page.html';
+	};
+
+	var getViewAdmin = function(viewName) {
+		return './views/app/pages/Admin/' + viewName + '/' + viewName + '.page.html';
 	};
 
 	$urlRouterProvider.otherwise('/');
@@ -12,10 +16,10 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			views: {
 				header: {
-					templateUrl: getView('header')
+					templateUrl: getViewUI('header')
 				},
 				footer: {
-					templateUrl: getView('footer')
+					templateUrl: getViewUI('footer')
 				},
 				main: {}
 			}
@@ -25,7 +29,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			data: {},
 			views: {
 				'main@': {
-					templateUrl: getView('landing')
+					templateUrl: getViewUI('landing')
 				}
 			}
 		})
@@ -33,7 +37,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			url: '/create-post',
 			views: {
 				'main@': {
-					templateUrl: getView('create_post')
+					templateUrl: getViewUI('create_post')
 				}
 			}
 		});
