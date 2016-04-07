@@ -19,7 +19,7 @@ class CreatePostFormController{
 }
 
 export const CreatePostFormComponent = {
-    templateUrl: './views/app/components/create_post_form/create_post_form.component.html',
+    templateUrl: './views/app/components/UI/create_post_form/create_post_form.component.html',
     controller: CreatePostFormController,
     controllerAs: 'vm',
     bindings: {}

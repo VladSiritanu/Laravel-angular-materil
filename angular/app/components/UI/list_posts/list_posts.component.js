@@ -28,7 +28,7 @@ class ListPostsController{
 }
 
 export const ListPostsComponent = {
-    templateUrl: './views/app/components/list_posts/list_posts.component.html',
+    templateUrl: './views/app/components/UI/list_posts/list_posts.component.html',
     controller: ListPostsController,
     controllerAs: 'vm',
     bindings: {}
