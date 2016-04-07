@@ -41,4 +41,35 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 				}
 			}
 		});
+
+		$stateProvider
+		.state('admin-app', {
+			abstract: true,
+			views: {
+				header: {
+					templateUrl: getViewAdmin('header')
+				},
+				footer: {
+					templateUrl: getViewAdmin('footer')
+				},
+				main: {}
+			}
+		})
+		.state('admin-app.landing', {
+			url: '/',
+			data: {},
+			views: {
+				'main@': {
+					templateUrl: getViewAdmin('landing')
+				}
+			}
+		})
+		.state('admin-app.create_post', {
+			url: '/create-post',
+			views: {
+				'main@': {
+					templateUrl: getViewAdmin('create_post')
+				}
+			}
+		});
 }
