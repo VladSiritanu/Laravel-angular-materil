@@ -56,7 +56,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state('admin-app.landing', {
-			url: '/',
+			url: '/admin',
 			data: {},
 			views: {
 				'main@': {
@@ -65,7 +65,7 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			}
 		})
 		.state('admin-app.create_post', {
-			url: '/create-post',
+			url: '/admin/create-post',
 			views: {
 				'main@': {
 					templateUrl: getViewAdmin('create_post')
