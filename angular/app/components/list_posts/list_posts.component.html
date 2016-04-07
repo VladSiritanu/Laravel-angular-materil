@@ -1,0 +1,8 @@
+<p>LE post2 </p>
+
+<ul class="list-group" >
+    <li class="list-group-item" ng-repeat="post in vm.posts">
+        {{post.name}}  <md-button type="submit" class="md-warn md-raised md-fab-top-left" ng-click="vm.delete(post.id)">Delete</md-button>
+    </li>
+</ul>
+
