@@ -16,37 +16,6 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			views: {
 				header: {
-					templateUrl: getViewUI('header')
-				},
-				footer: {
-					templateUrl: getViewUI('footer')
-				},
-				main: {}
-			}
-		})
-		.state('app.landing', {
-			url: '/',
-			data: {},
-			views: {
-				'main@': {
-					templateUrl: getViewUI('landing')
-				}
-			}
-		})
-		.state('app.create_post', {
-			url: '/create-post',
-			views: {
-				'main@': {
-					templateUrl: getViewUI('create_post')
-				}
-			}
-		});
-
-		$stateProvider
-		.state('admin-app', {
-			abstract: true,
-			views: {
-				header: {
 					templateUrl: getViewAdmin('header')
 				},
 				footer: {
@@ -55,20 +24,24 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 				main: {}
 			}
 		})
-		.state('admin-app.landing', {
-			url: '/admin',
+		.state('app.landing', {
+			url: '/',
 			data: {},
 			views: {
+				sidebar:{
+					templateUrl: getViewAdmin('admin-sidebar')
+				},
 				'main@': {
 					templateUrl: getViewAdmin('landing')
 				}
 			}
 		})
-		.state('admin-app.create_post', {
-			url: '/admin/create-post',
+		.state('app.create_post', {
+			url: '/create-post',
+			data: {},
 			views: {
 				'main@': {
-					templateUrl: getViewAdmin('create_post')
+					templateUrl: getViewUI('create_post')
 				}
 			}
 		});
