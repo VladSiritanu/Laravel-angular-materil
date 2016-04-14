@@ -18,6 +18,12 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 				header: {
 					templateUrl: getViewAdmin('header')
 				},
+				adminsidebar: {
+					templateUrl: getViewAdmin('adminsidebar')
+				},
+				adminchatnav: {
+					templateUrl: getViewAdmin('adminchatnav')
+				},
 				footer: {
 					templateUrl: getViewAdmin('footer')
 				},
@@ -28,11 +34,17 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 			url: '/',
 			data: {},
 			views: {
-				sidebar:{
-					templateUrl: getViewAdmin('admin-sidebar')
-				},
 				'main@': {
 					templateUrl: getViewAdmin('landing')
+				}
+			}
+		})
+		.state('app.layouts', {
+			url: '/layouts',
+			data: {},
+			views: {
+				'main@': {
+					templateUrl: getViewAdmin('layouts')
 				}
 			}
 		})

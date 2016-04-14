@@ -31,10 +31,15 @@
     <![endif]-->
 </head>
 <body class="menubar-hoverable header-fixed ">
-
-    <div ui-view="header"></div>
-    <div ui-view="main"></div>
-    <div ui-view="footer"></div>
+        <!-- BEGIN BASE-->
+        <div id="base">
+            <div ui-view="header"></div>
+            <div ui-view="main"></div>
+            <div ui-view="adminsidebar"></div>
+            <div ui-view="adminchatnav"></div>
+            <div ui-view="footer"></div>
+        </div><!--end #base-->
+        <!-- END BASE -->
 
     <script src="{!! asset('js/vendor.js') !!}"></script>
     <script src="{!! asset('js/partials.js') !!}"></script>
